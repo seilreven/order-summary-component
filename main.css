@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-color: var(--pale-blue);
+  background-repeat: repeat-x;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary {
+  max-width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.summary .summary-top img {
+  width: 100%;
+  display: block;
+}
+
+.summary .summary-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 42px;
+}
+
+.summary .summary-bottom .order-summary {
+  margin-bottom: 30px;
+}
+
+.summary-bottom .order-summary .summary-text {
+  text-align: center;
+}
+
+.summary .summary-bottom .order-summary h1 {
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.summary .summary-bottom .order-summary p {
+  color: var(--desaturated-blue);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.summary-bottom .order-summary .plan-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+}
+
+.summary-bottom .order-summary .plan-info .plan-info-left {
+  display: flex;
+  align-items: center;
+}
+
+.summary-bottom .order-summary .plan-info .plan-info-left .music-icon {
+  width: 40px;
+}
+
+.summary-bottom .order-summary .plan-info .plan-info-left .music-icon img {
+  width: 100%;
+}
+
+.summary-bottom .order-summary .plan-info .plan-info-left .term {
+  font-size: 0.75rem;
+  margin-left: 20px;
+}
+
+.summary-bottom .order-summary .plan-info .plan-info-left .term h3 {
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+
+.summary-bottom .order-summary .plan-info .plan-info-left .term p {
+  margin: 0;
+}
+
+.summary-bottom .order-summary .plan-info .plan-change {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.summary-bottom .payment {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  box-shadow: 0 20px 10px var(--pale-blue);
+}
+
+.summary-bottom .payment a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: block;
+  height: 100%;
+  font-size: 13px;
+  line-height: 40px;
+}
+
+.summary-bottom .cancel {
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+  font-size: 0.8rem;
+  letter-spacing: 0.01rem;
+  font-weight: 900;
+}
+
+.cta:hover {
+  cursor: pointer;
+}
+
+/* footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media only Screen and (max-width: 375px) {
+  .summary {
+    width: 88%;
+  }
+
+  .summary .summary-bottom {
+    padding: 25px;
+  }
+
+  .summary .summary-bottom .order-summary .summary-text h1 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .summary .summary-bottom .order-summary .summary-text p {
+    padding: 0 20px;
+    line-height: 25px;
+  }
+
+  .summary-bottom .order-summary .plan-info {
+    padding: 15px;
+  }
+}
